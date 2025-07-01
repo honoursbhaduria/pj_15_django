@@ -28,7 +28,8 @@ class Book(models.Model):
     author = models.ForeignKey(Author, related_name='books', on_delete=models.CASCADE)
 
 ```
-```Serializer
+### Serializer
+```
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
@@ -42,7 +43,7 @@ class AuthorSerializer(serializers.ModelSerializer):
         model = Author
         fields = ['id', 'name', 'books']
  ```
-sample API
+### sample API
 ```
 [
   {
